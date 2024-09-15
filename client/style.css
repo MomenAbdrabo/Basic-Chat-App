@@ -1,0 +1,25 @@
+body{
+    background-color: rgba(8, 8, 8, 0.903);
+}
+
+input{
+    background-color: rgb(16, 15, 15) !important;
+    color: azure !important;
+}
+input::placeholder{
+    color: azure !important;
+}
+ul{
+    color: rgb(255, 255, 255) !important;
+}
+li{
+    list-style: none;
+    padding: 10px ;
+    margin: 7px !important;    
+    border-radius: 8%;
+    width: fit-content;
+
+}
+li:nth-child(odd){
+    background-color: rgb(43, 54, 151);
+}
