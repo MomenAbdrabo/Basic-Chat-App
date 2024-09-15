@@ -20,4 +20,10 @@ io.on("connection",(socket)=>{
         io.emit("reply",msg)
         
     })
+    socket.on("Typing",()=>{
+        socket.broadcast.emit("userTyping")
+    });
+    socket.on("stopTyping",()=>{
+        socket.broadcast.emit("userStopTyping")
+    })
 })

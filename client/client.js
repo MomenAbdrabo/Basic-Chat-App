@@ -15,3 +15,19 @@ let message=document.getElementById("messages")
     inputData.value=""
     window.scrollTo(0,document.body.scrollHeight)
 })
+inputData.addEventListener("keyup",()=>{
+  socket.emit("Typing")
+}) 
+socket.on('userTyping',()=>{
+  document.getElementById('typing').innerHTML="Typing..."
+})
+
+inputData.addEventListener("keyup",()=>{
+  socket.emit("stopTyping")
+})
+
+socket.on("userStopTyping",()=>{
+  setTimeout(()=>{
+    document.getElementById("typing").innerHTML='';
+  },1000)
+})
